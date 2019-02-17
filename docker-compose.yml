@@ -1,0 +1,8 @@
+version: '3'
+services:
+  ci-build:
+    image: microsoft/dotnet:3.0-sdk
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: /bin/bash -c "dotnet run ./app.csproj"
